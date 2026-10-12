@@ -1,0 +1,11 @@
+﻿Bài 1 : Xử lý Log máy chủ dung lượng lớn 
+Phần 1: Phân tích
+* Không nên mở file 800MB bằng Notepad vì: ứng dụng sẽ cố nạp toàn bộ tệp vào RAM, khiến máy tính bị giật lag hoặc hiển thị thông báo “Not responding”
+* Trong CMD không dùng lạt cat để xem toàn bộ nội dụng của file mà dùng lệnh 
+type filename.txt hoặc dùng more filename.txt (xem từng trang màn hình)
+* Lệnh cat trong PowerShell là alias của Get-Content nên sẽ dùng để xem nội dung trong file.
+
+
+Phần 2: Hoàn thiện
+* Xem toàn bộ nội dung tệp: Get-Content server_log_800MB.log
+* Xem 10 dòng cuối cùng để kiểm tra lỗi: Get-Content sever_log_800MB.log -Tail 10
